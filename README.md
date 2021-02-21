@@ -1,1 +1,1 @@
-# 3lab- team seven
+# 3lab- Iskabylov Koskadamov Babayev
