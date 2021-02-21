@@ -12,7 +12,7 @@ def Gamma(y):
  
 def Crypt():
     gamma = Gamma(Y0)
-    with open('Sourse.txt', 'rb') as f:
+    with open('Sourse.txt', 'rb') as f: ''' source it's file )))'''
         while True:
             temp = f.read(8)
             if temp:
