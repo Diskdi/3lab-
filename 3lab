@@ -1,0 +1,23 @@
+A = 9
+B = 5
+M = 4096
+Y0 = 502
+ 
+def Gamma(y):
+    gamma_list = []
+    for _ in range(8):
+        y = (A * y + B) % M
+        gamma_list.append(y)
+    return gamma_list
+ 
+def Crypt():
+    gamma = Gamma(Y0)
+    with open('Sourse.txt', 'rb') as f:
+        while True:
+            temp = f.read(8)
+            if temp:
+                for i, item in enumerate(temp):
+                    print(chr(item ^ gamma[i]))
+            else:
+                break
+Crypt()
